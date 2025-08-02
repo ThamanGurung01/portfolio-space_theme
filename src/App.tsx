@@ -4,7 +4,6 @@ import "./App.css"
 import NavBar from "./components/NavBar"
 import Projects from "./components/Projects"
 import About from "./components/About"
-import Skill from "./components/Skill"
 import ContactMe from "./components/ContactMe"
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
     <HeroSection/>
     <About/>
     <Projects/>
-    <Skill/>
     <ContactMe/>
     </>
   )

@@ -5,7 +5,7 @@ import { FileText , Mail, Folder} from 'lucide-react';
 import { motion } from 'framer-motion';
 const HeroSection:React.FC = () => {
   return (
-    <section id='home' className='h-screen'>
+    <section id='home' className='h-screen text-white'>
     <div className='flex items-center justify-center w-full h-full gap-16'>
     <div className='flex flex-col items-center justify-center gap-5 w-1/2 pt-10'>
     <h1 className='name'>Hi,I'm <span className='highlight'>Thaman Gurung</span></h1>

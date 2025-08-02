@@ -1,4 +1,7 @@
 @import "tailwindcss";
 *{
-    @apply font-mono text-white scroll-smooth;
+    @apply font-mono scroll-smooth;
+}
+.section-heading{
+    @apply  font-bold text-center underline underline-offset-8 decoration-2 mb-8 decoration-gray-500;
 }
