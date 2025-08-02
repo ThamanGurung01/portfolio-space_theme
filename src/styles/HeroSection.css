@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.name{
+    @apply text-6xl font-bold text-center;
+}
+.profile{
+    @apply w-96 h-96 rounded-2xl object-cover;
+}
+.profile-container{
+    @apply p-[2px] my-10 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)];
+}
+.highlight{
+    text-shadow: 3px 3px 3px rgb(239, 179, 0);
+}
+.job{
+    @apply text-4xl font-bold;
+}
+.btn{
+    @apply text-xl font-bold;
+}
+.resume-btn{
+    @apply flex px-4 py-4 gap-2 text-black bg-white rounded-lg cursor-pointer;
+    @apply hover:bg-gray-900 hover:text-white;
+    @apply transition-all duration-300;
+}
+.resume-container{
+    @apply p-[2px] my-10 rounded-lg;
+}
+.hover_effect{
+    @apply bg-gradient-to-r from-purple-500 via-pink-500 to-red-500;
+}

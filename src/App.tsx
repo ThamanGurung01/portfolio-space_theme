@@ -1,11 +1,12 @@
+import HeroSection from "./components/HeroSection"
 import StarBackground from "./components/StarBackground"
-
+import "./App.css"
 
 function App() {
   return (
     <>
     <StarBackground/>
-      <h1 className="text-2xl text-red-700">Hello world</h1>
+      <HeroSection/>
     </>
   )
 }
