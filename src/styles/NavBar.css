@@ -1,0 +1,16 @@
+@import "tailwindcss";
+.navbar{
+    @apply w-full h-16 flex justify-around items-center font-serif text-lg fixed top-0 z-50 backdrop-blur-md bg-black/80 border-b-[1px] border-gray-900;
+    @apply transition-all duration-300;
+}
+.home, .about, .project, .skill, .contact {
+    @apply text-white hover:text-yellow-300;
+    @apply  transition-all duration-300;
+}
+.home:hover, .about:hover, .project:hover, .skill:hover, .contact:hover {
+        text-shadow: 3px 3px 3px rgb(239, 88, 0);
+}
+.home_logo{
+    @apply w-60 rounded-full;
+    @apply transition-transform duration-300;
+}

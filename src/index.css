@@ -1,4 +1,4 @@
 @import "tailwindcss";
-body{
-    @apply font-mono ;
+*{
+    @apply font-mono text-white scroll-smooth;
 }

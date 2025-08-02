@@ -4,13 +4,10 @@
     @apply text-6xl font-bold text-center;
 }
 .profile{
-    @apply w-[26rem] h-[26rem] rounded-2xl object-cover;
+    @apply w-[26rem] h-[26rem] rounded-2xl object-cover transition-all duration-300;
 }
 .profile-container{
-    @apply p-[2px] my-5 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)];
-}
-.highlight{
-    text-shadow: 3px 3px 3px rgb(239, 179, 0);
+    @apply p-[2px]  rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)];
 }
 .job{
     @apply text-4xl font-bold;

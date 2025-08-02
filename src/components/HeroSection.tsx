@@ -5,10 +5,10 @@ import { FileText , Mail, Folder} from 'lucide-react';
 import { motion } from 'framer-motion';
 const HeroSection:React.FC = () => {
   return (
-    <section className='text-white h-screen'>
+    <section id='home' className='h-screen'>
     <div className='flex items-center justify-center w-full h-full gap-16'>
     <div className='flex flex-col items-center justify-center gap-5 w-1/2 pt-10'>
-    <h1 className='name'>Hi, I'm <span className='highlight'>Thaman Gurung</span></h1>
+    <h1 className='name'>Hi,I'm <span className='highlight'>Thaman Gurung</span></h1>
     <p className='text-2xl text-center'>Aspiring web developer passionate about building engaging web experiences and constantly learning modern technologies.</p>
         <Typewriter
     options={{
@@ -23,18 +23,20 @@ const HeroSection:React.FC = () => {
         
     }}/>
     <div className='flex justify-center items-center text-center gap-10 mt-10'>
-        <motion.button
+        <motion.a
+        href='#contact'
          className='btn contact_btn'
          whileHover={{ scale: 1.1,rotate: 1 }}
-         ><Mail/><span>Contact Me</span></motion.button>
-        <motion.button
+         ><Mail/><span>Contact Me</span></motion.a>
+        <motion.a
+        href='#project'
          className='btn project_btn'
          whileHover={{ scale: 1.1,rotate: -1 }}
-         ><Folder/><span>View Projects</span></motion.button>
+         ><Folder/><span>View Projects</span></motion.a>
          </div>
     <motion.button
     className='btn resume-btn'
-    whileHover={{ scale: 1.2,rotate: -1 }}
+    whileHover={{ scale: 1.2 }}
      ><FileText/><span>Resume</span></motion.button>
     </div>
      <motion.div
@@ -50,7 +52,10 @@ const HeroSection:React.FC = () => {
         backgroundSize: "200% 200%",
       }}
     >
-    <img src="/profile.png" alt="" className='profile' />
+    <motion.img src="/profile.png" alt="" className='profile' 
+    whileHover={{ scale: 0.98 }}
+    exit={{scale:1}}
+    />
     </motion.div>
     </div>
     </section>
