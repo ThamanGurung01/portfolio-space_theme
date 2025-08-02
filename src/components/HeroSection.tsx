@@ -1,14 +1,13 @@
 import React from 'react'
 import '../styles/HeroSection.css'
 import Typewriter from 'typewriter-effect';
-import { FileText } from 'lucide-react';
+import { FileText , Mail, Folder} from 'lucide-react';
 import { motion } from 'framer-motion';
 const HeroSection:React.FC = () => {
-    const [isResumeHovered, setIsResumeHovered] = React.useState(false);
   return (
     <section className='text-white h-screen'>
-    <div className='flex items-center justify-center w-full h-full gap-24'>
-    <div className='flex flex-col items-center justify-center gap-5 w-1/2'>
+    <div className='flex items-center justify-center w-full h-full gap-16'>
+    <div className='flex flex-col items-center justify-center gap-5 w-1/2 pt-10'>
     <h1 className='name'>Hi, I'm <span className='highlight'>Thaman Gurung</span></h1>
     <p className='text-2xl text-center'>Aspiring web developer passionate about building engaging web experiences and constantly learning modern technologies.</p>
         <Typewriter
@@ -23,32 +22,23 @@ const HeroSection:React.FC = () => {
         cursorClassName: 'cursor',
         
     }}/>
-    <motion.div
-    className={`resume-container ${isResumeHovered?"hover_effect":""}`}
-    animate={  
-    isResumeHovered
-    ? { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }
-    : {}}
-    transition={{
-        duration:4,
-        repeat: Infinity,
-        ease: "linear",
-        }}
-    style={{
-        backgroundSize: "200% 200%",
-      }}
-    >
- <button
+    <div className='flex justify-center items-center text-center gap-10 mt-10'>
+        <motion.button
+         className='btn contact_btn'
+         whileHover={{ scale: 1.1,rotate: 1 }}
+         ><Mail/><span>Contact Me</span></motion.button>
+        <motion.button
+         className='btn project_btn'
+         whileHover={{ scale: 1.1,rotate: -1 }}
+         ><Folder/><span>View Projects</span></motion.button>
+         </div>
+    <motion.button
     className='btn resume-btn'
-    onMouseEnter={() => setIsResumeHovered(true)}
-    onMouseLeave={() => setIsResumeHovered(false)}
-     ><FileText/><span>Resume</span></button>
-    </motion.div>
-   
-    <div className='flex justify-center items-center text-center gap-10'><button className='btn'>Contact Me</button><button className='btn'> View Projects</button></div>
+    whileHover={{ scale: 1.2,rotate: -1 }}
+     ><FileText/><span>Resume</span></motion.button>
     </div>
      <motion.div
-    className="profile-container hover_effect"
+    className="profile-container border_effect"
     animate={{ 
         backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
     transition={{
