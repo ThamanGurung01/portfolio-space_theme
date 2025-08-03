@@ -10,7 +10,6 @@ const ContactMe:React.FC = () => {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if(sending) return;
-    console.log('Sending email...');
     if (!form.current) return;
 
     const formData = new FormData(form.current);
@@ -28,23 +27,22 @@ const ContactMe:React.FC = () => {
       toast.error('Please enter a valid email address.');
       return;
     }
-    console.log(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
-    console.log(import.meta.env.VITE_EMAIL_SERVICE_ID);
-    console.log(import.meta.env.VITE_EMAIL_TEMPLATE_ID);
     setSending(true);
     emailjs.sendForm(
-        import.meta.env.VITE_EMAIL_SERVICE_ID,
-        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        import.meta.env.VITE_EMAIL_SERVICE_ID!,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID!,
         form.current!,
-        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY!
       ).then(
         () => {
           toast.success('Message sent successfully!')
           form.current?.reset()
+          setSending(false);
         },
         (error) => {
           console.error(error)
           toast.error('Failed to send message. Please try again.')
+          setSending(false);
         }
       )
   }
