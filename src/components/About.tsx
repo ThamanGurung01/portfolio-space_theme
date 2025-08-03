@@ -38,7 +38,7 @@ const About:React.FC = () => {
       ], },
           ];
   return (
-    <section id='about' className='w-full h-screen py-20 backdrop-blur-md bg-gray-900/30 text-gray-200'>
+    <section id='about' className='w-full h-screen py-20 text-gray-200'>
       <div className='flex flex-col w-1/2 mx-auto text-center'>
       <h1 className='section-heading text-4xl'>About Me</h1>
       <p className='text-xl text-justify leading-relaxed py-2'>
@@ -60,8 +60,8 @@ const About:React.FC = () => {
             <motion.div
               key={idx}
               className="bg-gray-900 px-4 py-8 text-center rounded-2xl shadow-md hover:shadow-lg transition-all"
-              whileHover={{ scale: 1.05, y: -8 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.2 ,ease: "easeInOut"}}
               style={{
                 willChange:'transform',
               }}
@@ -70,10 +70,12 @@ const About:React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-100 mb-3">{skill.title}</h3>
               <ul className="text-white space-y-2 text-sm text-left w-full pl-16">
                 {skill.tools.map((tool, i) => (
-                <li key={i} className="flex items-center space-x-2 text-lg">
+                <motion.li key={i} className="flex items-center space-x-2 text-lg"
+                whileHover={{ scale: 1.2 }} transition={{ duration: 0.2 }} style={{ willChange: 'transform' }}
+                >
                   <span className="w-6 h-6">{tool.icon}</span>
-                  <span className='hover:text-white'>{tool.name}</span>
-                </li>
+                  <span className='hover:text-white hover:cursor-default'>{tool.name}</span>
+                </motion.li>
                 ))}
               </ul>
             </motion.div>
