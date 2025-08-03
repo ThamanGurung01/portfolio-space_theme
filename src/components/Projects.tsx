@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
         {projectList.map((project, idx) => (
           <motion.div
             key={idx}
-            className='pb-6  shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-2xl overflow-hidden border-b-2 border-gray-700'
+            className='pb-6  shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-2xl overflow-hidden border-b-4 border-gray-700'
             whileHover={{ y: -10, scale: 1.05 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             style={{ willChange: 'transform' }}

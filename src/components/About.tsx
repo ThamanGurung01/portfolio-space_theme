@@ -2,7 +2,7 @@ import { Monitor,Server ,GitBranch,Code, type LucideProps } from 'lucide-react';
 import React from 'react'
 import {motion} from 'framer-motion';
 import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiExpress, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer, SiLaravel, SiMongodb, SiMysql, SiFirebase, SiGithub, SiPostman } from 'react-icons/si';
+import { SiExpress, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer, SiLaravel, SiMongodb, SiMysql, SiFirebase, SiPostman } from 'react-icons/si';
 import '../styles/About.css';
 type SkillCardType = {
   icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
@@ -32,7 +32,6 @@ const About:React.FC = () => {
             {icon:GitBranch, title: "Tools & Version Control", tools: [
         { icon: <SiTypescript className='tool-icons' color="#3178C6" />, name: 'TypeScript' },
         { icon: <FaGitAlt className='tool-icons' color="#F05032" />, name: 'Git' },
-        { icon: <SiGithub className='tool-icons' color="#FFFFFF" />, name: 'GitHub' },
         { icon: <SiPostman className='tool-icons' color="#FF6C37" />, name: 'Postman' },
         
       ], },
@@ -48,7 +47,6 @@ const About:React.FC = () => {
          I enjoy coding and creating new things.</p>
       <p className='text-lg text-justify leading-relaxed py-2'>
         I'm always experimenting, learning new tools and improving my skills with every project.
-         Whether it's building user dashboards, interactive UIs, or full-stack apps, 
         I enjoy the process of creating and solving problems through code.</p>
       <p className='text-lg text-justify leading-relaxed py-2'>
         I'm currently looking for <span className='highlight'>internship opportunities</span> where I can apply my skills,

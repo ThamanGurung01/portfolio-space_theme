@@ -24,7 +24,7 @@ const CopyToClipboard: React.FC = () => {
   };
 
   return (
-      <motion.button onClick={handleCopy} className="transition-all duration-300 copy_to_clipboard"
+      <motion.button onClick={handleCopy} className="transition-all duration-300 copy_to_clipboard my-5"
       whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <Mail/> <span className='mx-2'>tgurung519@gmail.com</span> {copied ? <Check size={20} /> : <Copy size={20} />}
       </motion.button>

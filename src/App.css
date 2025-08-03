@@ -7,7 +7,7 @@
     text-shadow: 4px 4px 3px rgb(239, 88, 0);
 }
 .copy_to_clipboard{
-    @apply flex px-5 py-3 gap-2 mt-7 text-white rounded-lg cursor-pointer;
+    @apply flex px-6 py-3 gap-2 mt-7 text-white rounded-lg cursor-pointer;
     @apply bg-gradient-to-r from-purple-600 via-pink-600 to-red-600;
     @apply hover:from-purple-700 hover:via-pink-700 hover:to-red-700;
     @apply transition-colors duration-300;
