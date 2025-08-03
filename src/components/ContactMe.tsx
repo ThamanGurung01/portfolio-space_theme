@@ -1,5 +1,5 @@
 import React from 'react'
-import CopyToClipboard from './CopyToClipboard'
+import CopyToClipboard from './ui/CopyToClipboard'
 import { SiGithub,SiLinkedin,SiInstagram,SiFacebook} from 'react-icons/si'
 import '../styles/ContactMe.css';
 const ContactMe:React.FC = () => {
@@ -46,14 +46,13 @@ const ContactMe:React.FC = () => {
             rows={5}
             placeholder="Message"
             required
-            className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border resize-none border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           ></textarea>
           <button
             type="submit"
             className="w-3/12 mx-auto contact-btn font-semibold py-3 px-6 rounded-md transition-colors duration-300" 
             > Send Message</button>
         </form>
-
       </div>
     </section>
   )
