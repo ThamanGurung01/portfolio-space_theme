@@ -1,1 +1,4 @@
 @import "tailwindcss";
+.projects-btn{
+    @apply  font-semibold px-4 py-2 rounded-xl flex gap-2;
+}

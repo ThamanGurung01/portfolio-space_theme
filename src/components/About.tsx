@@ -55,11 +55,11 @@ const About:React.FC = () => {
         grow in a real-world environment, and contribute to meaningful projects.</p>
       </div>
           <h2 className='section-heading text-2xl mt-10'>Skills & Technologies</h2>
-      <div className='mt-10 grid grid-cols-3 gap-10 w-2/3 mx-auto'>
+      <div className='mt-10 grid grid-cols-3 gap-10 w-7/12 mx-auto'>
         {skillCard.map((skill, idx) => (
             <motion.div
               key={idx}
-              className="bg-gray-900 px-4 py-8 text-center rounded-2xl shadow-md hover:shadow-lg transition-all"
+              className=" px-4 py-8 text-center rounded-2xl shadow-md hover:shadow-lg transition-all border-b-4 border-r-4 border-gray-400"
               whileHover={{ y: -10 }}
               transition={{ duration: 0.2 ,ease: "easeInOut"}}
               style={{
@@ -74,7 +74,7 @@ const About:React.FC = () => {
                 whileHover={{ scale: 1.2 }} transition={{ duration: 0.2 }} style={{ willChange: 'transform' }}
                 >
                   <span className="w-6 h-6">{tool.icon}</span>
-                  <span className='hover:text-white hover:cursor-default'>{tool.name}</span>
+                  <span className='text-gray-300 hover:text-white hover:cursor-default'>{tool.name}</span>
                 </motion.li>
                 ))}
               </ul>
