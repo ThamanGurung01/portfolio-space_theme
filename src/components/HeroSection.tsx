@@ -34,10 +34,12 @@ const HeroSection:React.FC = () => {
          whileHover={{ scale: 1.1,rotate: -1 }}
          ><Folder/><span>View Projects</span></motion.a>
          </div>
-    <motion.button
+    <motion.a
+    href='/resume/ThamanGurungCV.pdf'
+    download={true}
     className='btn resume-btn'
     whileHover={{ scale: 1.2 }}
-     ><FileText/><span>Resume</span></motion.button>
+     ><FileText/><span>Resume</span></motion.a>
     </div>
      <motion.div
     className="profile-container border_effect"

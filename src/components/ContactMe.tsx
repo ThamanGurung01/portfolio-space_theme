@@ -1,10 +1,56 @@
-import React from 'react'
+import React,{ useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast, ToastContainer } from 'react-toastify'
 import CopyToClipboard from './ui/CopyToClipboard'
 import { SiGithub,SiLinkedin,SiInstagram,SiFacebook} from 'react-icons/si'
 import '../styles/ContactMe.css';
 const ContactMe:React.FC = () => {
+  const form = useRef<HTMLFormElement>(null)
+  const [sending, setSending] = React.useState(false);
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if(sending) return;
+    console.log('Sending email...');
+    if (!form.current) return;
+
+    const formData = new FormData(form.current);
+    const name = formData.get('name')?.toString().trim();
+    const email = formData.get('email')?.toString().trim();
+    const message = formData.get('message')?.toString().trim();
+
+    if (!name || !email || !message) {
+      toast.error('Please fill out all fields !');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address.');
+      return;
+    }
+    console.log(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
+    console.log(import.meta.env.VITE_EMAIL_SERVICE_ID);
+    console.log(import.meta.env.VITE_EMAIL_TEMPLATE_ID);
+    setSending(true);
+    emailjs.sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current!,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      ).then(
+        () => {
+          toast.success('Message sent successfully!')
+          form.current?.reset()
+        },
+        (error) => {
+          console.error(error)
+          toast.error('Failed to send message. Please try again.')
+        }
+      )
+  }
   return (
     <section id='contact' className='h-screen w-full py-20 text-white'>
+      <ToastContainer position="top-right" autoClose={3000} />
       <h1 className='section-heading text-4xl'>Get In Touch</h1>
       <div className='w-1/2 mx-auto text-center flex flex-col items-center'>
       <p className='text-center text-xl'>Have a question or want to work together?</p>
@@ -26,32 +72,30 @@ const ContactMe:React.FC = () => {
         </div>
       </div>
         <h2 className='section-heading text-2xl mt-3 pt-5'> Send me a message</h2>
-        <form className=" w-full flex flex-col gap-8 text-lg">
+        <form ref={form} onSubmit={sendEmail} className=" w-full flex flex-col gap-8 text-lg">
           <input
             type="text"
             name="name"
             placeholder="Name"
-            required
             className="w-1/2 mx-auto px-4 py-3 rounded-md  text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <input
             type="email"
             name="email"
             placeholder="Email"
-            required
             className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <textarea
             name="message"
             rows={5}
             placeholder="Message"
-            required
             className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border resize-none border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           ></textarea>
           <button
             type="submit"
-            className="w-3/12 mx-auto contact-btn font-semibold py-3 px-6 rounded-md transition-colors duration-300" 
-            > Send Message</button>
+            disabled={sending}
+            className={`w-3/12 mx-auto contact-btn font-semibold py-3 px-6 rounded-md transition-colors duration-300 ${sending ? "opacity-50 cursor-not-allowed" : ""}`}
+            > {sending ? 'Sending...' : 'Send Message'}</button>
         </form>
       </div>
     </section>
