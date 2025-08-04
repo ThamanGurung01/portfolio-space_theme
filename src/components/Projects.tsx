@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
         {projectList.map((project, idx) => (
           <motion.div
             key={idx}
-            className='pb-6  shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-2xl overflow-hidden border-b-4 border-gray-700'
+            className='pb-6 shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-2xl overflow-hidden border-b-4 border-gray-700'
             whileHover={{ y: -10, scale: 1.05 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             style={{ willChange: 'transform' }}
@@ -59,12 +59,12 @@ const Projects: React.FC = () => {
                 alt={project.title}
                 className='w-full h-56 rounded-md object-cover'
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-6 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {project.code && (
                 <motion.a
                   href={project.code}
                   target='_blank'
-                  className="projects-btn bg-white text-black hover:bg-gray-200"
+                  className="projects-btn bg-white text-black hover:bg-gray-200 active:bg-gray-200"
                   whileHover={{ scale: 1.1 }}>
                 <SiGithub className='tool-icons' color="#000" />
                   <span>Code</span>
@@ -74,7 +74,7 @@ const Projects: React.FC = () => {
                 <motion.a
                   href={project.demo}
                   target='_blank'
-                  className="projects-btn items-center bg-gray-900 text-white hover:bg-black"
+                  className="projects-btn items-center bg-gray-900 text-white hover:bg-black active:bg-black"
                   whileHover={{ scale: 1.1 }}>
                   <SquareArrowOutUpRight size={17}/>
                   <span>Demo</span>
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
             </div>
 
             <h2 className="text-2xl font-semibold text-white mt-4 mb-2 px-3">{project.title}</h2>
-            <p className="text-gray-400 mb-4 ml-2 hover:text-white px-3">{project.description}</p>
+            <p className="text-gray-300 mb-4 ml-2 hover:text-white px-3">{project.description}</p>
 
             <div className="flex flex-wrap gap-3 px-3">
               {project.tech.map((tech, i) => (

@@ -38,14 +38,14 @@ const About:React.FC = () => {
 
   return (
     <section id='about' className='w-full min-h-screen py-20 text-gray-200'>
-      <div className='flex flex-col w-1/2 mx-auto text-center'>
+      <div className='flex flex-col w-full px-5 sm:px-20 lg:w-1/2 mx-auto text-center'>
       <motion.h1 className='section-heading text-4xl'
       initial={{ scale: 0.8, opacity: 0, y: 50 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       whileInView={{ scale:1, opacity: 1,y: 0 }}
       viewport={{once: true}}
       >About Me</motion.h1>
-      <motion.p className='text-xl text-justify leading-relaxed py-2'
+      <motion.p className='text-lg text-start leading-relaxed py-2'
       transition={{ duration: 0.5, ease: ["easeInOut"] }}
       initial={{scale: 0.8, opacity: 0, x: 50 }}
       whileInView={{ scale:1, opacity: 1,x: 0  }}
@@ -54,16 +54,8 @@ const About:React.FC = () => {
         I'm a <span className='highlight'>BCA undergraduate student</span> with a passion for building 
         web applications using the MERN stack — <span className='highlight'>MongoDB</span>, 
         <span className='highlight'>Express.js</span>, <span className='highlight'>React</span>, and <span className='highlight'>Node.js</span>. 
-         I enjoy coding and creating new things.</motion.p>
-      <motion.p className='text-lg text-justify leading-relaxed py-2'
-      transition={{ duration: 0.6, ease: "easeInOut" }}
-      initial={{scale: 0.8, opacity: 0, x: 50 }}
-      whileInView={{ scale:1, opacity: 1,x: 0  }}
-      viewport={{once: true}}
-      >
-        I'm always experimenting, learning new tools and improving my skills with every project.
-        I enjoy the process of creating and solving problems through code.</motion.p>
-      <motion.p className='text-lg text-justify leading-relaxed py-2'
+         I enjoy coding and the process of creating and solving problems through code.</motion.p>
+      <motion.p className='text-lg text-start leading-relaxed py-2'
       transition={{ duration: 0.7, ease: "easeInOut" }}
       initial={{scale: 0.8, opacity: 0, x: 50 }}
       whileInView={{ scale:1, opacity: 1,x: 0  }}
@@ -78,7 +70,7 @@ const About:React.FC = () => {
       whileInView={{ scale:1, opacity: 1,x: 0  }}
           viewport={{once: true}}
           >Skills & Technologies</motion.h2>
-      <motion.div className='mt-10 grid grid-cols-3 gap-10 w-7/12 mx-auto'
+      <motion.div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-7/12 mx-auto'
       transition={{ duration: 0.7, ease: "easeInOut" }}
       whileInView={{ scale:[0.8, 1], opacity: [0, 1],y: [50, 0] }}
       viewport={{once: true}}
@@ -95,9 +87,9 @@ const About:React.FC = () => {
             >
               <skill.icon className="w-12 h-12 mx-auto mb-4 text-gray-400 transition-colors duration-300 hover:text-white" />
               <h3 className="text-xl font-semibold text-gray-100 mb-3">{skill.title}</h3>
-              <ul className="text-white space-y-2 text-sm text-left w-full pl-16">
+              <ul className="text-white space-y-2 text-sm text-left w-full">
                 {skill.tools.map((tool, i) => (
-                <motion.li key={i} className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white"
+                <motion.li key={i} className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white justify-center"
                 whileHover={{ scale: 1.2 }} transition={{ duration: 0.2 }} style={{ willChange: 'transform' }}
                 >
                   <span className="w-6 h-6">{tool.icon}</span>

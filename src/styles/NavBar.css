@@ -1,10 +1,10 @@
 @import "tailwindcss";
 .navbar{
-    @apply w-full md:h-16 flex flex-col md:flex-row md:justify-around items-center font-serif text-lg fixed top-0 z-50 backdrop-blur-md bg-black/80 border-b-[1px] border-gray-900;
+    @apply w-full py-2 md:min-h-16 flex flex-col md:flex-row md:justify-around items-center font-serif text-lg fixed top-0 z-50 backdrop-blur-md bg-black/80 border-b-[1px] border-gray-900;
     @apply transition-all duration-300;
 }
 .home, .about, .project, .skill, .contact {
-    @apply text-white hover:text-yellow-300;
+    @apply text-white hover:text-yellow-300 active:text-yellow-300;
     @apply  transition-all duration-300;
 }
 .home:hover, .about:hover, .project:hover, .skill:hover, .contact:hover {

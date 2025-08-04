@@ -56,8 +56,8 @@ const ContactMe:React.FC = () => {
       whileInView={{ scale:1, opacity: 1,y: 0 }}
       viewport={{once: true, amount:0.2}}
       >Get In Touch</motion.h1>
-      <div className='w-1/2 mx-auto text-center flex flex-col items-center'>
-      <motion.p className='text-center text-xl'
+      <div className='w-full lg:w-3/5 xl:w-1/2 mx-auto text-center flex flex-col items-center'>
+      <motion.p className='text-center text-xl w-full'
       transition={{ duration: 0.5, ease: ["easeInOut"] }}
       initial={{ scale: 0.8, opacity: 0, x: 60, y: 30 }}
       whileInView={{ scale:1, opacity: 1,x:0,y: 0 }}
@@ -121,24 +121,24 @@ const ContactMe:React.FC = () => {
             type="text"
             name="name"
             placeholder="Name"
-            className="w-1/2 mx-auto px-4 py-3 rounded-md  text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-3/4 md:w-1/2 mx-auto px-4 py-3 rounded-md  text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <input
             type="email"
             name="email"
             placeholder="Email"
-            className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-3/4 md:w-1/2 mx-auto px-4 py-3 rounded-md text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <textarea
             name="message"
             rows={5}
             placeholder="Message"
-            className="w-1/2 mx-auto px-4 py-3 rounded-md text-white border resize-none border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-3/4 md:w-1/2 mx-auto px-4 py-3 rounded-md text-white border resize-none border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           ></textarea>
           <button
             type="submit"
             disabled={sending}
-            className={`w-3/12 mx-auto contact-btn font-semibold py-3 px-6 rounded-md transition-colors duration-300 ${sending ? "opacity-50 cursor-not-allowed" : ""}`}
+            className={`mx-auto contact-btn font-semibold rounded-md transition-colors duration-300 ${sending ? "opacity-50 cursor-not-allowed" : ""}`}
             > {sending ? 'Sending...' : 'Send Message'}</button>
         </motion.form>
       </div>
