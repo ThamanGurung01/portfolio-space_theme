@@ -59,14 +59,14 @@ const ContactMe:React.FC = () => {
       <div className='w-full lg:w-3/5 xl:w-1/2 mx-auto text-center flex flex-col items-center'>
       <motion.p className='text-center text-xl w-full'
       transition={{ duration: 0.5, ease: ["easeInOut"] }}
-      initial={{ scale: 0.8, opacity: 0, x: 60, y: 30 }}
-      whileInView={{ scale:1, opacity: 1,x:0,y: 0 }}
+      initial={{ scale: 0.8, opacity: 0, y: 30 }}
+      whileInView={{ scale:1, opacity: 1, y: 0 }}
       viewport={{once: true}}
       >Have a question or want to work together?</motion.p>
       <motion.div className='my-4'
           transition={{ duration: 0.7, ease: ["easeInOut"] }}
-          initial={{ scale: 0.8, opacity: 0, x: 80 }}
-          whileInView={{ scale:1, opacity: 1,x: 0 }}
+          initial={{ scale: 0.8, opacity: 0, y: 80 }}
+          whileInView={{ scale:1, opacity: 1,y: 0 }}
           viewport={{once: true}}
       >
         <CopyToClipboard/>
@@ -113,8 +113,8 @@ const ContactMe:React.FC = () => {
         > Send me a message</motion.h2>
         <motion.form ref={form} onSubmit={sendEmail} className=" w-full flex flex-col gap-8 text-lg"
           transition={{ duration: 0.6, ease: ["easeInOut"] }}
-          initial={{ scale: 0.8, opacity: 0, x: 80 }}
-          whileInView={{ scale:1, opacity: 1,x: 0 }}
+          initial={{ scale: 0.8, opacity: 0, y: 80 }}
+          whileInView={{ scale:1, opacity: 1,y: 0 }}
           viewport={{once: true}}
         >
           <input

@@ -7,7 +7,7 @@ const HeroSection:React.FC = () => {
   return (
     <section id='home' className='text-white min-h-screen pt-24 md:pt-44 lg:pt-64'>
     <div className='flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:gap-16'>
-    <div className='flex flex-col items-center justify-center gap-5 w-full lg:w-1/2 pt-10'>
+    <div className='flex flex-col items-center justify-center gap-5 w-full lg:w-1/2 pt-8'>
     <motion.h1 className='name'
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const HeroSection:React.FC = () => {
     className='btn resume-btn'
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: "easeInOut" }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
     whileHover={{ scale: 1.2 }}
      ><FileText/><span>Resume</span></motion.a>
     </div>
@@ -80,8 +80,9 @@ const HeroSection:React.FC = () => {
         backgroundSize: "200% 200%",
       }}
     >
-    <motion.img src="/profile.png" alt="" className='profile' 
+    <motion.img src="/image.jpg" alt="image" className='profile' 
     whileHover={{ scale: 0.98 }}
+    transition={{duration:0.3}}
     exit={{scale:1}}
     />
     </motion.div>

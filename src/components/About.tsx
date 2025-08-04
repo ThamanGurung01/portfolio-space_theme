@@ -45,29 +45,29 @@ const About:React.FC = () => {
       whileInView={{ scale:1, opacity: 1,y: 0 }}
       viewport={{once: true}}
       >About Me</motion.h1>
-      <motion.p className='text-lg text-start leading-relaxed py-2'
+      <motion.p className='text-xl text-start leading-relaxed py-2'
       transition={{ duration: 0.5, ease: ["easeInOut"] }}
-      initial={{scale: 0.8, opacity: 0, x: 50 }}
-      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      initial={{scale: 0.8, opacity: 0, y: 50 }}
+      whileInView={{ scale:1, opacity: 1,y: 0  }}
       viewport={{once: true}}
       >
         I'm a <span className='highlight'>BCA undergraduate student</span> with a passion for building 
         web applications using the MERN stack — <span className='highlight'>MongoDB</span>, 
         <span className='highlight'>Express.js</span>, <span className='highlight'>React</span>, and <span className='highlight'>Node.js</span>. 
          I enjoy coding and the process of creating and solving problems through code.</motion.p>
-      <motion.p className='text-lg text-start leading-relaxed py-2'
+      <motion.p className='text-xl text-start leading-relaxed py-2'
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      initial={{scale: 0.8, opacity: 0, x: 50 }}
-      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      initial={{scale: 0.8, opacity: 0, y: 50 }}
+      whileInView={{ scale:1, opacity: 1,y: 0  }}
       viewport={{once: true}}
       >
         I'm currently looking for <span className='highlight'>internship opportunities</span> where I can apply my skills,
         grow in a real-world environment, and contribute to meaningful projects.</motion.p>
       </div>
-          <motion.h2 className='section-heading text-2xl mt-10'
+          <motion.h2 className='section-heading text-2xl mt-5'
           transition={{ duration: 0.6, ease: "easeInOut" }}
-      initial={{scale: 0.8, opacity: 0, x: 50 }}
-      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      initial={{scale: 0.8, opacity: 0, y: 50 }}
+      whileInView={{ scale:1, opacity: 1,y: 0  }}
           viewport={{once: true}}
           >Skills & Technologies</motion.h2>
       <motion.div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-7/12 mx-auto'

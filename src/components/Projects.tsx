@@ -35,8 +35,8 @@ const Projects: React.FC = () => {
     <section id='project' className='min-h-screen py-20 text-white'>
       <motion.h1 className='section-heading text-4xl'
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      initial={{ scale: 0.8, opacity: 0, y: 50, x: 50 }}
-      whileInView={{ scale: 1, opacity: 1, y: 0, x: 0 }}
+      initial={{ scale: 0.8, opacity: 0, y: 50}}
+      whileInView={{ scale: 1, opacity: 1, y: 0}}
       viewport={{once: true}}
       >Featured Projects</motion.h1>
       <motion.div className='flex w-2/3 mx-auto text-center gap-14 mt-32 flex-wrap justify-center'
