@@ -28,7 +28,7 @@ const navAnimation = {
       animate={navAnimation.animate}
       transition={navAnimation.transition}
       exit={navAnimation.exit}
-      ><img src="/home_logo2.png" alt="Thaman" className='home_logo'/></motion.a>
+      ><img src="/home_logo.png" alt="Thaman" className='home_logo'/></motion.a>
       <div className='hamburger' onClick={handleToggle}>
         {toggleHamburger?<X className='text-white'/>:<Menu className='text-white'/>}
       </div>
