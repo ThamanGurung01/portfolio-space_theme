@@ -8,9 +8,22 @@ const HeroSection:React.FC = () => {
     <section id='home' className='h-screen text-white'>
     <div className='flex items-center justify-center w-full h-full gap-16'>
     <div className='flex flex-col items-center justify-center gap-5 w-1/2 pt-10'>
-    <h1 className='name'>Hi,I'm <span className='highlight'>Thaman Gurung</span></h1>
-    <p className='text-2xl text-center'>Aspiring web developer passionate about building engaging web experiences and constantly learning modern technologies.</p>
-        <Typewriter
+    <motion.h1 className='name'
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: "easeInOut" }}
+    >Hi,I'm <span className='highlight'>Thaman Gurung</span></motion.h1>
+    <motion.p className='text-2xl text-center'
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.9, ease: "easeInOut" }}
+    >Aspiring web developer passionate about building engaging web experiences and constantly learning modern technologies.</motion.p>
+    <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeInOut" }}
+    >
+    <Typewriter
     options={{
         strings: ['Full-Stack Web Developer', 'MERN Stack Developer'],
         autoStart: true,
@@ -22,7 +35,12 @@ const HeroSection:React.FC = () => {
         cursorClassName: 'cursor',
         
     }}/>
-    <div className='flex justify-center items-center text-center gap-10 mt-10'>
+    </motion.div>
+    <motion.div className='flex justify-center items-center text-center gap-10 mt-5'
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeInOut" }}
+    >
         <motion.a
         href='#contact'
          className='btn contact_btn'
@@ -33,14 +51,22 @@ const HeroSection:React.FC = () => {
          className='btn project_btn'
          whileHover={{ scale: 1.1,rotate: -1 }}
          ><Folder/><span>View Projects</span></motion.a>
-         </div>
+         </motion.div>
     <motion.a
     href='/resume/ThamanGurungCV.pdf'
     download={true}
     className='btn resume-btn'
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeInOut" }}
     whileHover={{ scale: 1.2 }}
      ><FileText/><span>Resume</span></motion.a>
     </div>
+    <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.2, ease: "easeInOut" }}
+    >
      <motion.div
     className="profile-container border_effect"
     animate={{ 
@@ -58,6 +84,7 @@ const HeroSection:React.FC = () => {
     whileHover={{ scale: 0.98 }}
     exit={{scale:1}}
     />
+    </motion.div>
     </motion.div>
     </div>
     </section>

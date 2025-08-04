@@ -1,16 +1,52 @@
 import React from 'react'
+import { motion, easeInOut } from 'framer-motion'
 import '../styles/NavBar.css'
 const NavBar:React.FC = () => {
+const navAnimation = {
+    initial:{y: -100, opacity: 0},
+    animate:{y: 0, opacity: 1},
+    transition:{duration: 0.6, ease: easeInOut},
+    exit:{y: -100, opacity: 0},
+}
   return (
-    <div className='navbar'>
-      <a href="/"><img src="/home_logo.png" alt="Thaman" className='home_logo'/></a>
+    <motion.div className='navbar'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={{duration:0.3, ease: easeInOut}}
+      exit={navAnimation.exit}
+    >
+      <motion.a href="/"
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={navAnimation.transition}
+      exit={navAnimation.exit}
+      ><img src="/home_logo.png" alt="Thaman" className='home_logo'/></motion.a>
       <div className='flex gap-10'>
-        <a href='#home' className='home'>Home</a>
-        <a href='#about' className='about'>About</a>
-        <a href='#project' className='project'>Projects</a>
-        <a href='#contact' className='contact'>Contact</a>
+        <motion.a href='#home' className='home'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={navAnimation.transition}
+      exit={navAnimation.exit}
+        >Home</motion.a>
+        <motion.a href='#about' className='about'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={{duration:0.7, ease: easeInOut}}
+      exit={navAnimation.exit}>About</motion.a>
+        <motion.a href='#project' className='project'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={{duration:0.8, ease: easeInOut}}
+      exit={navAnimation.exit}
+        >Projects</motion.a>
+        <motion.a href='#contact' className='contact'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={{duration:0.9, ease: easeInOut}}
+      exit={navAnimation.exit}
+        >Contact</motion.a>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

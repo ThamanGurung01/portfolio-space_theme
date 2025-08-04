@@ -33,8 +33,18 @@ const Projects: React.FC = () => {
 
   return (
     <section id='project' className='h-screen py-20 text-white'>
-      <h1 className='section-heading text-4xl'>Featured Projects</h1>
-      <div className='flex w-2/3 mx-auto text-center gap-14 mt-32 flex-wrap justify-center'>
+      <motion.h1 className='section-heading text-4xl'
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      initial={{ scale: 0.8, opacity: 0, y: 50, x: 50 }}
+      whileInView={{ scale: 1, opacity: 1, y: 0, x: 0 }}
+      viewport={{once: true}}
+      >Featured Projects</motion.h1>
+      <motion.div className='flex w-2/3 mx-auto text-center gap-14 mt-32 flex-wrap justify-center'
+      initial={{ scale: 0.8, opacity: 0, y: 50 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      whileInView={{ scale:1, opacity: 1,y: 0 }}
+      viewport={{once: true}}
+      >
         {projectList.map((project, idx) => (
           <motion.div
             key={idx}
@@ -95,7 +105,7 @@ const Projects: React.FC = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

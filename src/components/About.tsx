@@ -34,26 +34,55 @@ const About:React.FC = () => {
         { icon: <FaGitAlt className='tool-icons' color="#F05032" />, name: 'Git' },
         { icon: <SiPostman className='tool-icons' color="#FF6C37" />, name: 'Postman' },
         
-      ], },
-          ];
+      ], },];
+
   return (
     <section id='about' className='w-full h-screen py-20 text-gray-200'>
       <div className='flex flex-col w-1/2 mx-auto text-center'>
-      <h1 className='section-heading text-4xl'>About Me</h1>
-      <p className='text-xl text-justify leading-relaxed py-2'>
+      <motion.h1 className='section-heading text-4xl'
+      initial={{ scale: 0.8, opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      whileInView={{ scale:1, opacity: 1,y: 0 }}
+      viewport={{once: true}}
+      >About Me</motion.h1>
+      <motion.p className='text-xl text-justify leading-relaxed py-2'
+      transition={{ duration: 0.5, ease: ["easeInOut"] }}
+      initial={{scale: 0.8, opacity: 0, x: 50 }}
+      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      viewport={{once: true}}
+      >
         I'm a <span className='highlight'>BCA undergraduate student</span> with a passion for building 
         web applications using the MERN stack — <span className='highlight'>MongoDB</span>, 
         <span className='highlight'>Express.js</span>, <span className='highlight'>React</span>, and <span className='highlight'>Node.js</span>. 
-         I enjoy coding and creating new things.</p>
-      <p className='text-lg text-justify leading-relaxed py-2'>
+         I enjoy coding and creating new things.</motion.p>
+      <motion.p className='text-lg text-justify leading-relaxed py-2'
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      initial={{scale: 0.8, opacity: 0, x: 50 }}
+      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      viewport={{once: true}}
+      >
         I'm always experimenting, learning new tools and improving my skills with every project.
-        I enjoy the process of creating and solving problems through code.</p>
-      <p className='text-lg text-justify leading-relaxed py-2'>
+        I enjoy the process of creating and solving problems through code.</motion.p>
+      <motion.p className='text-lg text-justify leading-relaxed py-2'
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      initial={{scale: 0.8, opacity: 0, x: 50 }}
+      whileInView={{ scale:1, opacity: 1,x: 0  }}
+      viewport={{once: true}}
+      >
         I'm currently looking for <span className='highlight'>internship opportunities</span> where I can apply my skills,
-        grow in a real-world environment, and contribute to meaningful projects.</p>
+        grow in a real-world environment, and contribute to meaningful projects.</motion.p>
       </div>
-          <h2 className='section-heading text-2xl mt-10'>Skills & Technologies</h2>
-      <div className='mt-10 grid grid-cols-3 gap-10 w-7/12 mx-auto'>
+          <motion.h2 className='section-heading text-2xl mt-10'
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+      initial={{scale: 0.8, opacity: 0, x: 50 }}
+      whileInView={{ scale:1, opacity: 1,x: 0  }}
+          viewport={{once: true}}
+          >Skills & Technologies</motion.h2>
+      <motion.div className='mt-10 grid grid-cols-3 gap-10 w-7/12 mx-auto'
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      whileInView={{ scale:[0.8, 1], opacity: [0, 1],y: [50, 0] }}
+      viewport={{once: true}}
+      >
         {skillCard.map((skill, idx) => (
             <motion.div
               key={idx}
@@ -78,7 +107,7 @@ const About:React.FC = () => {
               </ul>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
     </section>
   )
 }

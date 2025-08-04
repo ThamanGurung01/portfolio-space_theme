@@ -4,7 +4,7 @@
     @apply text-6xl font-bold text-center;
 }
 .profile{
-    @apply w-[26rem] h-[26rem] rounded-2xl object-cover transition-all duration-300;
+    @apply w-[26rem] h-[26rem] rounded-2xl object-cover;
 }
 .profile-container{
     @apply p-[2px]  rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)];
