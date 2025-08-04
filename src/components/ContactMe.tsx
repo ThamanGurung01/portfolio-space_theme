@@ -48,7 +48,7 @@ const ContactMe:React.FC = () => {
       )
   }
   return (
-    <section id='contact' className='h-screen w-full py-20 text-white'>
+    <section id='contact' className='min-h-screen w-full py-20 text-white'>
       <ToastContainer position="top-right" autoClose={3000} />
       <motion.h1 className='section-heading text-4xl'
       transition={{ duration: 0.8, ease: "easeInOut" }}

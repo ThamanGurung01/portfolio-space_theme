@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id='project' className='h-screen py-20 text-white'>
+    <section id='project' className='min-h-screen py-20 text-white'>
       <motion.h1 className='section-heading text-4xl'
       transition={{ duration: 0.6, ease: "easeInOut" }}
       initial={{ scale: 0.8, opacity: 0, y: 50, x: 50 }}

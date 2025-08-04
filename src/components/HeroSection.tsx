@@ -5,15 +5,15 @@ import { FileText , Mail, Folder} from 'lucide-react';
 import { motion } from 'framer-motion';
 const HeroSection:React.FC = () => {
   return (
-    <section id='home' className='h-screen text-white'>
-    <div className='flex items-center justify-center w-full h-full gap-16'>
-    <div className='flex flex-col items-center justify-center gap-5 w-1/2 pt-10'>
+    <section id='home' className='text-white min-h-screen pt-24 md:pt-44 lg:pt-64'>
+    <div className='flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:gap-16'>
+    <div className='flex flex-col items-center justify-center gap-5 w-full lg:w-1/2 pt-10'>
     <motion.h1 className='name'
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, ease: "easeInOut" }}
-    >Hi,I'm <span className='highlight'>Thaman Gurung</span></motion.h1>
-    <motion.p className='text-2xl text-center'
+    ><span className='hidden 2xl:inline-block'>Hi,I'm</span> <span className='highlight'>Thaman Gurung</span></motion.h1>
+    <motion.p className='text-xl text-center lg:text-2xl px-4 sm:px-20 md:px-36 lg:px-4'
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.9, ease: "easeInOut" }}

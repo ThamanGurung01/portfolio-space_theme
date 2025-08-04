@@ -37,7 +37,7 @@ const About:React.FC = () => {
       ], },];
 
   return (
-    <section id='about' className='w-full h-screen py-20 text-gray-200'>
+    <section id='about' className='w-full min-h-screen py-20 text-gray-200'>
       <div className='flex flex-col w-1/2 mx-auto text-center'>
       <motion.h1 className='section-heading text-4xl'
       initial={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -97,11 +97,11 @@ const About:React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-100 mb-3">{skill.title}</h3>
               <ul className="text-white space-y-2 text-sm text-left w-full pl-16">
                 {skill.tools.map((tool, i) => (
-                <motion.li key={i} className="flex items-center space-x-2 text-lg"
+                <motion.li key={i} className="flex items-center space-x-2 text-lg text-gray-300 hover:text-white"
                 whileHover={{ scale: 1.2 }} transition={{ duration: 0.2 }} style={{ willChange: 'transform' }}
                 >
                   <span className="w-6 h-6">{tool.icon}</span>
-                  <span className='text-gray-300 hover:text-white hover:cursor-default'>{tool.name}</span>
+                  <span className=' hover:cursor-default'>{tool.name}</span>
                 </motion.li>
                 ))}
               </ul>

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 .name{
-    @apply text-6xl font-bold text-center;
+    @apply text-5xl lg:text-6xl font-bold text-center;
 }
 .profile{
-    @apply w-[26rem] h-[26rem] rounded-2xl object-cover;
+    @apply w-[20rem] h-[20rem] lg:w-[26rem] lg:h-[26rem] rounded-2xl object-cover;
 }
 .profile-container{
     @apply p-[2px]  rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)];
 }
 .job{
-    @apply text-4xl font-bold;
+    @apply text-2xl lg:text-4xl font-bold text-gray-300;
 }
 .btn{
     @apply text-xl font-bold;
@@ -20,6 +20,8 @@
     @apply bg-gradient-to-r from-purple-500 via-pink-500 to-red-500;
     @apply hover:from-purple-600 hover:via-pink-600 hover:to-red-600;
     @apply transition-colors duration-300;
+    @apply active:bg-gradient-to-r active:from-purple-600 active:via-pink-600 active:to-red-600 active:border-black;
+
 }
 .border_effect{
     @apply bg-gradient-to-r from-purple-600 via-pink-600 to-red-600;
@@ -28,9 +30,11 @@
     @apply flex px-4 py-3 gap-2 text-white rounded-lg cursor-pointer;
     @apply border-[1px] border-gray-500;
     @apply hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-red-600 hover:border-black;
+    @apply active:bg-gradient-to-r active:from-purple-600 active:via-pink-600 active:to-red-600 active:border-black;
 }
 .project_btn{
     @apply flex px-4 py-3 gap-2 text-white rounded-lg cursor-pointer;
     @apply border-[1px] border-gray-500;
     @apply hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-red-600 hover:border-black;
+    @apply active:bg-gradient-to-r active:from-purple-600 active:via-pink-600 active:to-red-600 active:border-black;
 }
