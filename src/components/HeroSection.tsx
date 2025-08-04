@@ -7,13 +7,13 @@ const HeroSection:React.FC = () => {
   return (
     <section id='home' className='text-white min-h-screen pt-24 md:pt-44 lg:pt-64'>
     <div className='flex flex-col-reverse lg:flex-row items-center justify-center w-full h-full lg:gap-16'>
-    <div className='flex flex-col items-center justify-center gap-5 w-full lg:w-1/2 pt-8'>
+    <div className='flex flex-col items-center justify-center gap-3 md:gap-5 w-full lg:w-1/2 pt-8'>
     <motion.h1 className='name'
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, ease: "easeInOut" }}
     ><span className='hidden 2xl:inline-block'>Hi,I'm</span> <span className='highlight'>Thaman Gurung</span></motion.h1>
-    <motion.p className='text-xl text-center lg:text-2xl px-4 sm:px-20 md:px-36 lg:px-4'
+    <motion.p className='hidden md:inline-block text-xl text-center lg:text-2xl px-4 sm:px-20 md:px-36 lg:px-4 text-gray-300'
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.9, ease: "easeInOut" }}
@@ -31,12 +31,12 @@ const HeroSection:React.FC = () => {
         deleteSpeed: 50,
         delay: 75,
         cursor: '|',
-        wrapperClassName: 'job highlight',
+        wrapperClassName: 'job',
         cursorClassName: 'cursor',
         
     }}/>
     </motion.div>
-    <motion.div className='flex justify-center items-center text-center gap-10 mt-5'
+    <motion.div className='flex justify-center items-center text-center gap-10 mt-3 md:mt-5 mx-2'
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, ease: "easeInOut" }}

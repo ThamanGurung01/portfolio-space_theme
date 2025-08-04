@@ -70,7 +70,7 @@ const About:React.FC = () => {
       whileInView={{ scale:1, opacity: 1,y: 0  }}
           viewport={{once: true}}
           >Skills & Technologies</motion.h2>
-      <motion.div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-7/12 mx-auto'
+      <motion.div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-4/5  xl:w-7/12 mx-auto'
       transition={{ duration: 0.7, ease: "easeInOut" }}
       whileInView={{ scale:[0.8, 1], opacity: [0, 1],y: [50, 0] }}
       viewport={{once: true}}
