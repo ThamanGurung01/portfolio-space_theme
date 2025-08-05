@@ -37,7 +37,7 @@ const About:React.FC = () => {
       ], },];
 
   return (
-    <section id='about' className='w-full min-h-screen py-0 md:py-20 text-gray-200'>
+    <section id='about' className='w-full min-h-screen pt-18 md:py-20 text-gray-200'>
       <div className='flex flex-col w-full px-5 sm:px-20 lg:w-1/2 mx-auto text-center'>
       <motion.h1 className='section-heading text-4xl'
       initial={{ scale: 0.8, opacity: 0, y: 50 }}
