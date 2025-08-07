@@ -14,20 +14,20 @@ const Projects: React.FC = () => {
       demo:'https://blood-bank-management-system-eosin.vercel.app/',
     },
     {
+      image: "/project_image/IncomeExpenseTracker.png",
+      title: 'Income Expense Tracker',
+      description: 'A web application that helps users track their income and expenses, providing insights into their financial health.',
+      tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS', 'TypeScript'],
+      code:'https://github.com/ThamanGurung01/Income-Expense-Tracker',
+      demo:'https://income-expense-tracker-ruddy.vercel.app/',
+    },
+    {
       image: "/project_image/no_image.jpg",
       title: 'Blogger',
       description: 'A blog platform that allows users to create, read, update, and delete posts, providing a seamless experience for both content creators and readers.',
       tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS', 'Quill'],
       code:'https://github.com/ThamanGurung01/Blogger',
       demo:'https://blogger-tau-six.vercel.app/',
-    },
-    {
-      image: "/project_image/no_image.jpg",
-      title: 'Income Expense Tracker',
-      description: 'A web application that helps users track their income and expenses, providing insights into their financial health.',
-      tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS', 'TypeScript'],
-      code:'https://github.com/ThamanGurung01/Income-Expense-Tracker',
-      demo:'',
     },
   ];
 
