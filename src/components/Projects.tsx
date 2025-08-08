@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
       demo:'https://income-expense-tracker-ruddy.vercel.app/',
     },
     {
-      image: "/project_image/no_image.jpg",
+      image: "/project_image/bloggerImage.png",
       title: 'Blogger',
       description: 'A blog platform that allows users to create, read, update, and delete posts, providing a seamless experience for both content creators and readers.',
       tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Tailwind CSS', 'Quill'],
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
         {projectList.map((project, idx) => (
           <motion.div
             key={idx}
-            className='pb-6 shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-2xl overflow-hidden border-b-4 border-gray-700'
+            className='pb-6 shadow-lg my-6 flex flex-col items-center w-96 text-start relative rounded-t-md rounded-b-2xl overflow-hidden border-b-4 border-gray-700'
             whileHover={{ y: -10, scale: 1.05 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             style={{ willChange: 'transform' }}
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className='w-full h-56 rounded-md object-cover'
+                className='w-full h-56 object-cover'
               />
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-6 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {project.code && (
