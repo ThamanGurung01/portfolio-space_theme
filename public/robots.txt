@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.thamangurung.com.np/sitemap.xml
