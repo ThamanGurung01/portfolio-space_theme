@@ -4,12 +4,22 @@ import { toast, ToastContainer } from 'react-toastify'
 import CopyToClipboard from './ui/CopyToClipboard'
 import { SiGithub,SiLinkedin,SiInstagram,SiFacebook} from 'react-icons/si'
 import {motion} from 'framer-motion'
+import ReCAPTCHA from "react-google-recaptcha";
 import '../styles/ContactMe.css';
 const ContactMe:React.FC = () => {
   const form = useRef<HTMLFormElement>(null)
   const [sending, setSending] = React.useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isVerified, setIsVerified] = React.useState(false);
+  const handleCaptchaChange = (value: string | null) => {
+    if (value) setIsVerified(true);
+  };
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isVerified) {
+      alert("Please verify you are a human!");
+      return;
+    }
     if(sending) return;
     if (!form.current) return;
 
@@ -37,6 +47,7 @@ const ContactMe:React.FC = () => {
       ).then(
         () => {
           toast.success('Message sent successfully!')
+          recaptchaRef.current?.reset();
           form.current?.reset()
           setSending(false);
         },
@@ -135,6 +146,12 @@ const ContactMe:React.FC = () => {
             placeholder="Message"
             className="w-3/4 md:w-1/2 mx-auto px-4 py-3 rounded-md text-white border resize-none border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           ></textarea>
+          <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={import.meta.env.VITE_GOOGLE_RECAPTCHA_SITE_KEY!}
+        onChange={handleCaptchaChange}
+        className='mx-auto'
+        />
           <button
             type="submit"
             disabled={sending}
