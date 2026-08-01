@@ -1,0 +1,12 @@
+@import "tailwindcss";
+.company:hover{
+text-shadow: 4px 4px 3px rgb(18, 116, 244);
+}
+.badge{
+    @apply text-sm;
+    @apply flex px-2 py-0.5 gap-2 mt-2 text-white rounded-xs cursor-pointer;
+    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-red-600;
+    @apply hover:from-purple-700 hover:via-pink-700 hover:to-red-700;
+    @apply transition-colors duration-300;
+    @apply active:bg-gradient-to-r active:from-purple-600 active:via-pink-600 active:to-red-600 active:border-black;
+}
