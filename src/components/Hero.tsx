@@ -53,7 +53,7 @@ const HeroSection:React.FC = () => {
          ><Folder/><span>View Projects</span></motion.a>
          </motion.div>
     <motion.a
-    href='/resume/ThamanGurungCV.pdf'
+    href='/resume/Resume.pdf'
     download={true}
     className='btn resume-btn'
     initial={{ opacity: 0, y: 20 }}
