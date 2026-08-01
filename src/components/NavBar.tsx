@@ -45,6 +45,11 @@ const navAnimation = {
       animate={navAnimation.animate}
       transition={{duration:0.7, ease: easeInOut}}
       exit={navAnimation.exit}>About</motion.a>
+        <motion.a href='#experience' className='experience'
+      initial={navAnimation.initial}
+      animate={navAnimation.animate}
+      transition={{duration:0.7, ease: easeInOut}}
+      exit={navAnimation.exit}>Experience</motion.a>
         <motion.a href='#project' className='project'
       initial={navAnimation.initial}
       animate={navAnimation.animate}
