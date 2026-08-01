@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
               {project.tech.map((tech, i) => (
                 <motion.span
                   key={i}
-                  className="bg-gray-700 text-sm text-white px-3 py-1 rounded-full cursor-default font-bold"
+                  className="bg-gray-700 text-sm text-white px-3 py-1 rounded-full cursor-pointer font-bold"
                   whileHover={{
                     scale: 1.1,
                     rotate: -2,

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/HeroSection.css'
+import '../styles/Hero.css'
 import Typewriter from 'typewriter-effect';
 import { FileText , Mail, Folder} from 'lucide-react';
 import { motion } from 'framer-motion';
