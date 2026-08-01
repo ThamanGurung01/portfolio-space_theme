@@ -14,7 +14,6 @@ const navAnimation = {
   const handleToggle = () => {
     setToggleHamburger(!toggleHamburger);
   };
-  console.log(toggleHamburger);
   return (
     <motion.div className='navbar'
       initial={navAnimation.initial}
