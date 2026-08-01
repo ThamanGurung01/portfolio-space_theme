@@ -17,7 +17,7 @@ const HeroSection:React.FC = () => {
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.9, ease: "easeInOut" }}
-    >Aspiring web developer passionate about building engaging web experiences and constantly learning modern technologies.</motion.p>
+    >Full Stack Developer with 1 year of professional experience building scalable web applications using Laravel, Next.js, and modern web technologies. Passionate about developing efficient, maintainable solutions and continuously expanding technical expertise.</motion.p>
     <motion.div
     initial={{ opacity: 0, y: 10 }}
     animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const HeroSection:React.FC = () => {
     >
     <Typewriter
     options={{
-        strings: ['Full-Stack Web Developer', 'MERN Stack Developer'],
+        strings: ['Full-Stack Developer', 'MERN Stack Developer', 'Laravel Developer'],
         autoStart: true,
         loop: true,
         deleteSpeed: 50,
